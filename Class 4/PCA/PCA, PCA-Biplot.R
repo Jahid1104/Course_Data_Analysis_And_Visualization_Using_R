@@ -15,6 +15,8 @@ head(data)
 data1 <-data[,-1]
 head(data1)
 
+
+
 ###Load the library
 library("factoextra")
 library("FactoMineR")
@@ -37,6 +39,8 @@ eig.val
 
 ##Scree plot
 fviz_eig(res.pca, choice = "eigenvalue", geom.="bar", barfill="green4", addlabels = TRUE)
+
+
 
 ## Percentage of explained variance
 fviz_eig(res.pca, geom.="bar", barfill="green3", addlabels = TRUE, hjust = -0.8, ylim = c(0, 45))

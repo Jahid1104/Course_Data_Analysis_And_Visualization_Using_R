@@ -1,9 +1,8 @@
 
-
 my_data <- read.csv(file.choose())
 
 head(my_data)
-d<-my_data[,c(-1)]
+d <- my_data[,c(-1)]
 d
 
 cor(d)
@@ -13,17 +12,23 @@ mat <-cor(d)
 library (corrplot)
 
 corrplot(mat) #plot 1
-corrplot(mat,method="color", type="lower")
+corrplot(mat,method="square", type="upper")
 
 #method = c("circle", "square", "ellipse", "number", "shade", "color", "pie"),
 #type = c("full", "lower", "upper")
 
+
+
 library(metan)
 # All numeric variables
 
+data<- read.csv(file.choose)
+d <- data[, c(-1)]
 ALL=corr_coef(d)
 ALL
 plot(ALL)
+
+
 
 
 #plot 7

@@ -12,14 +12,21 @@ tail(a)
 
 ancova(a[3:9],a$Gen,a$Rep)
 
+
+
 ##### Estimation of Genetic Parameters#####
 gen.var(a[3:9],a$Gen,a$Rep)
+
+
 
 #####Genotypic Correlation Analysis#####
 geno.corr(a[3:9],a$Gen,a$Rep)
 
 #### Phenotypic Correlation Analysis####
 pheno.corr (a[3:9],a$Gen,a$Rep)
+
+
+
 
 ####Estimation of direct and indirect effect####
 

@@ -8,6 +8,7 @@ head(data) # first 6 observations
 tail(data) # last 6 observations
 
 str(data) # structure of data set
+View(data)
 
 
 max(data$Sepal.Length)             # Maximum value
@@ -17,6 +18,8 @@ rng
 
 
 max(data$Sepal.Length) - min(data$Sepal.Length) #Difference between maximum & minimum data
+
+
 
 
 range2 <- function(x) {
@@ -30,8 +33,10 @@ range2(data$Sepal.Length)
 
 mean(data$Sepal.Length)
 median(data$Sepal.Length)
+
 tab <- table(data$Sepal.Length) # number of occurrences for each unique value
 sort(tab, decreasing = TRUE) # sort highest to lowest
+
 sort(table(data$Species), decreasing = TRUE)
 
 summary(data$Sepal.Length)
@@ -50,8 +55,10 @@ quantile(data$Sepal.Length, 0.75) - quantile(data$Sepal.Length, 0.25)
 
 
 sd(data$Sepal.Length) # standard deviation
-lapply(data[, 1:4], sd)
+lapply(data[, 1:4], var)
 var(data$Sepal.Length) # variance
+
+
 
 #min, first quartile, median, mean, third quartile and max
 summary(data)
@@ -59,6 +66,8 @@ by(data, data$Species, summary)
 
 
 
+
+data <- read.csv(file.choose())
 library(pastecs)
 stat.desc(data)
 
